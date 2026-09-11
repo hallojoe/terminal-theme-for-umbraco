@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <StaticWebAssetBasePath>/</StaticWebAssetBasePath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <Product>Casko.TerminalThemeForUmbraco</Product>
+    <PackageId>Casko.TerminalThemeForUmbraco</PackageId>
+    <Title>Terminal Theme for Umbraco</Title>
+    <Description>A terminal-inspired, developer-focused Backoffice theme for Umbraco 17.</Description>
+    <PackageTags>umbraco;backoffice;theme;terminal;developer;uui</PackageTags>
+    <Authors>Casper Korsgaard</Authors>
+    <Copyright>$([System.DateTime]::UtcNow.ToString(`yyyy`)) © Casper Korsgaard</Copyright>
+    <PackageProjectUrl>https://github.com/hallojoe/terminal-theme-for-umbraco</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/hallojoe/terminal-theme-for-umbraco</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <Version>0.1.0</Version>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <!-- Per-project - with versions -->
+  <ItemGroup>
+    <PackageReference Include="Umbraco.Cms.Web.Common" Version="17.6.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="../../README.md" Pack="true" PackagePath="/" Link="README.md" />
+  </ItemGroup>
+</Project>

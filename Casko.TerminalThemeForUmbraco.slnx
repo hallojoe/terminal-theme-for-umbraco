@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="src/Casko.TerminalThemeForUmbraco.TestSite/Casko.TerminalThemeForUmbraco.TestSite.csproj" />
+  <Project Path="src/Casko.TerminalThemeForUmbraco/Casko.TerminalThemeForUmbraco.csproj" />
+</Solution>

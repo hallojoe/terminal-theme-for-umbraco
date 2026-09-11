@@ -1,0 +1,22 @@
+# Build output
+[Bb]in/
+[Oo]bj/
+
+# Node tooling
+node_modules/
+dist/
+
+# User and IDE state
+.vs/
+.idea/
+*.user
+*.suo
+
+# Local Umbraco test-site state
+TerminalTheme.TestSite/App_Data/
+TerminalTheme.TestSite/umbraco/Data/
+TerminalTheme.TestSite/umbraco/Logs/
+TerminalTheme.TestSite/umbraco/Temp/
+TerminalTheme.TestSite/appsettings-schema.json
+TerminalTheme.TestSite/appsettings-schema.Umbraco.Cms.json
+TerminalTheme.TestSite/umbraco-package-schema.json

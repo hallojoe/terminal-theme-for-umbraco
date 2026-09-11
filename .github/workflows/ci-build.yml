@@ -1,0 +1,48 @@
+name: CI Build Validation
+
+on:
+  push:
+    branches:
+      - develop
+      - main
+  pull_request:
+    branches:
+      - develop
+      - main
+
+permissions:
+  contents: read
+
+env:
+  DOTNET_VERSION: 10.0.x
+  SOLUTION_FILE: Casko.TerminalThemeForUmbraco.slnx
+  PACKAGE_PROJECT: src/Casko.TerminalThemeForUmbraco/Casko.TerminalThemeForUmbraco.csproj
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: ${{ env.DOTNET_VERSION }}
+
+      - name: Restore
+        run: dotnet restore "${{ env.SOLUTION_FILE }}"
+
+      - name: Build
+        run: dotnet build "${{ env.SOLUTION_FILE }}" --configuration Release --no-restore
+
+      - name: Pack
+        run: dotnet pack "${{ env.PACKAGE_PROJECT }}" --configuration Release --no-build -o ./artifacts
+
+      - name: Upload package artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: nuget-package
+          path: artifacts/*.nupkg
+          if-no-files-found: error

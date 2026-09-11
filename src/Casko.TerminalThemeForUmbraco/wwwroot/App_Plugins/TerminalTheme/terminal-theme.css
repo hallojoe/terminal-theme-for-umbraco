@@ -1,0 +1,239 @@
+/* -------------------------------------------------
+   Terminal palette
+   ------------------------------------------------- */
+
+:root {
+  --terminal-bg: #050806;
+  --terminal-surface: #080d09;
+  --terminal-surface-2: #0c140e;
+  --terminal-surface-3: #101a12;
+  --terminal-border: #193d25;
+  --terminal-border-soft: #102b19;
+  --terminal-text: #d8fbe2;
+  --terminal-text-muted: #8eb49a;
+  --terminal-green: #39ff88;
+  --terminal-green-soft: #72ffa5;
+  --terminal-green-dim: #1ba653;
+  --terminal-warning: #f2b84b;
+  --terminal-danger: #f06b68;
+  --terminal-info: #69b8ff;
+}
+
+/* -------------------------------------------------
+   Umbraco / UUI token mapping
+   ------------------------------------------------- */
+
+:root {
+  --uui-font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", monospace;
+  --uui-border-radius: 3px;
+  --uui-border-radius-1: 2px;
+  --uui-border-radius-2: 3px;
+  --uui-border-radius-3: 4px;
+  --uui-shadow-depth-1: 0 1px 0 rgb(0 0 0 / 40%);
+  --uui-shadow-depth-2: 0 4px 14px rgb(0 0 0 / 35%);
+  --uui-shadow-depth-3: 0 8px 22px rgb(0 0 0 / 45%);
+  --uui-shadow-depth-4: 0 12px 28px rgb(0 0 0 / 55%);
+  --uui-shadow-depth-5: 0 16px 36px rgb(0 0 0 / 65%);
+
+  --uui-color-scheme: dark;
+  --uui-color-background: var(--terminal-bg);
+  --uui-color-surface: var(--terminal-surface);
+  --uui-color-surface-alt: var(--terminal-surface-2);
+  --uui-color-surface-emphasis: var(--terminal-surface-3);
+  --uui-color-header-surface: var(--terminal-bg);
+  --uui-color-header-contrast: var(--terminal-text);
+  --uui-color-header-contrast-emphasis: var(--terminal-green-soft);
+  --uui-color-text: var(--terminal-text);
+  --uui-color-text-alt: var(--terminal-text-muted);
+  --uui-color-interactive: var(--terminal-green-soft);
+  --uui-color-interactive-emphasis: var(--terminal-green);
+  --uui-color-interactive-contrast: var(--terminal-bg);
+  --uui-color-focus: var(--terminal-green);
+  --uui-color-border: var(--terminal-border-soft);
+  --uui-color-border-standalone: var(--terminal-border);
+  --uui-color-border-emphasis: #28613a;
+  --uui-color-divider: var(--terminal-border-soft);
+  --uui-color-divider-standalone: var(--terminal-border);
+  --uui-color-divider-emphasis: #28613a;
+  --uui-color-selected: #103d23;
+  --uui-color-selected-emphasis: #14512c;
+  --uui-color-selected-standalone: var(--terminal-green-dim);
+  --uui-color-selected-contrast: var(--terminal-text);
+  --uui-color-current: var(--terminal-green-dim);
+  --uui-color-current-emphasis: var(--terminal-green);
+  --uui-color-current-standalone: var(--terminal-green);
+  --uui-color-current-contrast: var(--terminal-bg);
+  --uui-color-default: var(--terminal-green-dim);
+  --uui-color-default-emphasis: var(--terminal-green);
+  --uui-color-default-standalone: var(--terminal-green-soft);
+  --uui-color-default-contrast: var(--terminal-bg);
+  --uui-color-positive: #289b5c;
+  --uui-color-positive-emphasis: #39c875;
+  --uui-color-positive-standalone: #67e69c;
+  --uui-color-positive-contrast: var(--terminal-bg);
+  --uui-color-warning: #b77b19;
+  --uui-color-warning-emphasis: var(--terminal-warning);
+  --uui-color-warning-standalone: #ffd16b;
+  --uui-color-warning-contrast: var(--terminal-bg);
+  --uui-color-danger: #bd4c4b;
+  --uui-color-danger-emphasis: var(--terminal-danger);
+  --uui-color-danger-standalone: #ff918d;
+  --uui-color-danger-contrast: var(--terminal-bg);
+  --uui-color-invalid: #bd4c4b;
+  --uui-color-invalid-emphasis: var(--terminal-danger);
+  --uui-color-invalid-standalone: #ff918d;
+  --uui-color-invalid-contrast: var(--terminal-bg);
+  --uui-color-disabled: #26342a;
+  --uui-color-disabled-standalone: #3b5343;
+  --uui-color-disabled-contrast: #789083;
+}
+
+/* -------------------------------------------------
+   Global typography
+   ------------------------------------------------- */
+
+body,
+umb-app {
+  background: var(--terminal-bg);
+  color: var(--terminal-text);
+  font-family: var(--uui-font-family);
+}
+
+::selection {
+  background: var(--terminal-green);
+  color: var(--terminal-bg);
+}
+
+/* -------------------------------------------------
+   Navigation
+   ------------------------------------------------- */
+
+umb-app-header,
+umb-section-sidebar,
+umb-tree,
+umb-tree-item {
+  --uui-color-surface: var(--terminal-surface);
+  --uui-color-surface-alt: var(--terminal-surface-2);
+  --uui-color-selected: #103d23;
+}
+
+umb-app-header {
+  border-bottom: 1px solid var(--terminal-border);
+}
+
+umb-section-sidebar {
+  border-right: 1px solid var(--terminal-border-soft);
+}
+
+/* -------------------------------------------------
+   Workspaces / panels
+   ------------------------------------------------- */
+
+uui-box,
+umb-workspace-editor,
+umb-workspace-view,
+umb-property-layout {
+  --uui-color-surface: var(--terminal-surface);
+  --uui-color-surface-alt: var(--terminal-surface-2);
+  --uui-color-border: var(--terminal-border-soft);
+  --uui-color-divider: var(--terminal-border-soft);
+  --uui-border-radius: 3px;
+}
+
+uui-box {
+  box-shadow: none;
+}
+
+/* -------------------------------------------------
+   Forms
+   ------------------------------------------------- */
+
+uui-input,
+uui-textarea,
+uui-select,
+uui-combobox,
+uui-toggle,
+uui-checkbox,
+uui-radio {
+  --uui-color-surface: var(--terminal-bg);
+  --uui-color-border: var(--terminal-border);
+  --uui-color-focus: var(--terminal-green);
+  --uui-color-text: var(--terminal-text);
+  --uui-color-text-alt: var(--terminal-text-muted);
+}
+
+uui-input:focus-within,
+uui-textarea:focus-within,
+uui-select:focus-within,
+uui-combobox:focus-within {
+  outline: 1px solid var(--terminal-green);
+  outline-offset: 2px;
+}
+
+/* -------------------------------------------------
+   Tables / lists
+   ------------------------------------------------- */
+
+uui-table,
+umb-collection,
+umb-collection-table {
+  --uui-color-surface: var(--terminal-surface);
+  --uui-color-surface-alt: var(--terminal-surface-2);
+  --uui-color-divider: var(--terminal-border-soft);
+  --uui-color-selected: #103d23;
+}
+
+uui-table-head-cell,
+uui-table-head-cell * {
+  color: var(--terminal-text-muted);
+  font-size: var(--uui-type-small-size);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* -------------------------------------------------
+   Modals / popovers
+   ------------------------------------------------- */
+
+uui-dialog,
+uui-popover-container,
+umb-modal-layout,
+umb-popover-layout {
+  --uui-color-surface: var(--terminal-surface-2);
+  --uui-color-surface-alt: var(--terminal-surface-3);
+  --uui-color-border: var(--terminal-border);
+  --uui-color-divider: var(--terminal-border-soft);
+}
+
+/* -------------------------------------------------
+   Terminal details
+   ------------------------------------------------- */
+
+:focus-visible {
+  outline: 2px solid var(--terminal-green);
+  outline-offset: 2px;
+}
+
+* {
+  scrollbar-color: var(--terminal-border) var(--terminal-bg);
+}
+
+*::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--terminal-bg);
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--terminal-border);
+  border: 2px solid var(--terminal-bg);
+  border-radius: 3px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: var(--terminal-green-dim);
+}

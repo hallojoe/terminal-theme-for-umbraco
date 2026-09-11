@@ -1,0 +1,15 @@
+{
+  "$schema": "../../umbraco-package-schema.json",
+  "id": "Casko.TerminalThemeForUmbraco",
+  "name": "Terminal Theme",
+  "version": "0.1.0",
+  "extensions": [
+    {
+      "type": "theme",
+      "alias": "Casko.TerminalThemeForUmbraco.Theme",
+      "name": "Terminal",
+      "css": "/App_Plugins/TerminalTheme/terminal-theme.css",
+      "weight": 250
+    }
+  ]
+}
